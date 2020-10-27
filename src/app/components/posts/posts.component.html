@@ -1,0 +1,22 @@
+<ng-container *ngIf="allPosts">
+  <div class="container-fluid mt-5">
+    <div class="card-group">
+      <ng-container *ngFor="let post of allPosts">
+        <div class="card text-white bg-info mb-3 mx-2" style="max-width: 18rem;">
+          <div class="card-header">{{post.title}}</div>
+          <div class="card-body">
+            <h5 class="card-title">{{post.title}}</h5>
+            <p class="card-text">{{post.description}}</p>
+            <p class="card-text">{{post.note_category}}</p>
+            <p class="card-text">{{post.note_status}}</p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <img src="{{ user.photoUrl }}">
+  <div>
+    <h4>{{ user.name }}</h4>
+    <p>{{ user.email }}</p>
+  </div>
+</ng-container>
